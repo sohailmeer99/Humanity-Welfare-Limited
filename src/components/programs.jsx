@@ -19,7 +19,7 @@ function Programs(){
                         </div>
                     </div>
                     <div className="programs-img">
-                        <img src="../../public/Assets/4.jpg" />
+                    <img src="/Humanity-Welfare-Limited/assets/4.jpg" />
                     </div>
                 </div>
                 <div className="programs-donation" style={{backgroundColor:'yellow'}}>
