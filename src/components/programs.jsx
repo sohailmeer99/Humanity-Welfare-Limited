@@ -24,7 +24,7 @@ function Programs(){
                 </div>
                 <div className="programs-donation" style={{backgroundColor:'yellow'}}>
                     <div><h1>Rs . 123</h1></div>
-                    <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, eum nisi enim alias possimus optio quibusdam reiciendis tenetur incidunt itaque nostrum molestias modi. Corporis, eaque.</p></div>
+                    <div><p>Lorem ipsum dolor consectetur adipisicing elit. Repudiandae, eum nisi enim alias possimus optio quibusdam reiciendis tenetur incidunt itaque nostrum molestias modi. Corporis, eaque.</p></div>
                     <div><button>Donate</button></div>
                 </div>
             </div>
