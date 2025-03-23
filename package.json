@@ -1,5 +1,6 @@
 {
   "name": "humanity-welfare-limited",
+  "homepage": "https://sohailmeer99.github.io/Humanity-Welfare-Limited",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,8 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
