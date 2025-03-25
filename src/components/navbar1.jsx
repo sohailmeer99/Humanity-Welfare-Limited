@@ -3,7 +3,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 function NavbarF(){
     return(
-        <div style={{width:'100%',height:'5vh',backgroundColor:'#2c8c52', letterSpacing:'1px',display:'flex', alignItems:'center',justifyContent:'center'}}>
+        <div style={{width:'100%',height:'5vh',backgroundColor:'#4FFFB0', letterSpacing:'1px',display:'flex', alignItems:'center',justifyContent:'center'}}>
             <div style={{width:'80%',display:'flex', justifyContent:'space-between', alignItems:'center'}}>
                 <div style={{display:'flex', alignItems:'center'}}>
                 <span><FontAwesomeIcon icon={faWhatsapp} size="2x" color="#fff" /></span>
