@@ -28,6 +28,7 @@ function Article(props) {
                     padding:'10px',
                     boxShadow:'0px 10px 52px -12px #4FFFB0',
                     justifyContent: 'space-between',
+                    borderRadius:'40px'
                 }}
             >
                 <div style={{ width: '30vw', height: '100%' }}>
