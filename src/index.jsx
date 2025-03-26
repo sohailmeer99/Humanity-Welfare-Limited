@@ -1,6 +1,7 @@
 import NavbarF from "./components/navbar1";
 import NavbarS from "./components/navbar2";
 import Article from "./components/article";
+import Footer from "./components/footer";
 function Index(){
     return(
         <div>
@@ -15,6 +16,7 @@ function Index(){
             <Article articleNumber = {0} img="/Humanity-Welfare-Limited/assets/4.jpg" />
             <Article articleNumber = {1} img="/Humanity-Welfare-Limited/assets/5.jpg"/>
             <Article articleNumber = {2} img="/Humanity-Welfare-Limited/assets/6.jpg"/>
+            <Footer />
         </div>
     );
 }

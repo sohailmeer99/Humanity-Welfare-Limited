@@ -17,7 +17,7 @@ function Article(props) {
                 height: '70vh',
                 display: 'flex',
                 justifyContent: 'center',
-                marginBottom:'20vh'
+                marginBottom:'20vh',
             }}
         >
             <div
@@ -25,6 +25,8 @@ function Article(props) {
                     width: '80%',
                     height: '70vh',
                     display: 'flex',
+                    padding:'10px',
+                    boxShadow:'0px 10px 52px -12px #4FFFB0',
                     justifyContent: 'space-between',
                 }}
             >
