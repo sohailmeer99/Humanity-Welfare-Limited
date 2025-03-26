@@ -3,7 +3,7 @@ import { faSquareFacebook, faSquareInstagram, faLinkedin, faSquareXTwitter } fro
 
 function Footer() {
     return (
-        <div style={{ height: '35vh', width: '100%', backgroundColor: '#4FFFB0'}}>
+        <div style={{ height: '40vh', width: '100%', backgroundColor: '#4FFFB0'}}>
            <div style={{width: '100%',height:'100%', display: 'flex',flexDirection:'column', justifyContent: 'space-around',alignItems:'center'}}>
            
            <div style={{width:'80%', display:'flex',justifyContent:'space-between'}}>
