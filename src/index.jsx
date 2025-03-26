@@ -12,7 +12,9 @@ function Index(){
             <div style={{width:'100%',display:'flex',margin:'80px 0',justifyContent:'center'}}>
                 <h1 style={{fontSize:'4rem', color:'#000',textDecoration:'underline'}}>Articles</h1>
             </div>
-            <Article />
+            <Article articleNumber = {0} img="/Humanity-Welfare-Limited/assets/4.jpg" />
+            <Article articleNumber = {1} img="/Humanity-Welfare-Limited/assets/5.jpg"/>
+            <Article articleNumber = {2} img="/Humanity-Welfare-Limited/assets/6.jpg"/>
         </div>
     );
 }
