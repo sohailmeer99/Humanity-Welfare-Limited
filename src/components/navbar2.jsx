@@ -1,6 +1,6 @@
 function NavbarS(){
     return(
-        <div style={{width:'100%', height:'10vh', display:'flex',backgroundColor:'#fff', justifyContent:'center',alignItems:'center',position:'sticky',top:'0'}}>
+        <div style={{zIndex: '1000',width:'100%', height:'10vh', display:'flex',backgroundColor:'#fff', justifyContent:'center',alignItems:'center',position:'sticky',top:'0'}}>
             <div style={{width:'80%',height:'10vh',display:'flex', justifyContent:'space-between',alignItems:'center'}}>
                 <div><h1 style={{color:'#4FFFB0',cursor:'pointer',letterSpacing:'3px',fontFamily: "'Boldonse', sans-serif",fontWeight:'normal'}}>HWL</h1></div>
                 <div style={{ width:'80%',display:'flex', justifyContent:'space-between',alignItems:'center'}}>
