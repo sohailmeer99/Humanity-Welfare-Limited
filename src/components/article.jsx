@@ -58,7 +58,7 @@ function Article(props) {
                             style={{
                                 paddingBottom: '30px',
                                 fontSize: '3rem',
-                                color: '#000',
+                                color: '#00cd70c7',
                                 margin: 0,
                                 fontWeight:'900'
                             }}
@@ -81,7 +81,7 @@ function Article(props) {
     transition={{ duration: 0.5 }}
     style={{
         fontSize: '1.4rem',
-        color: '#000',
+        color: '#00cd70c7',
         width: showFull ? '100%' : '100%', // ✅ Smoothly transition width
         transition: 'width 0.5s ease',
         overflowX: 'hidden', // ✅ No horizontal scrollbar flicker
@@ -101,7 +101,7 @@ function Article(props) {
                 <span
                     onClick={handleShowLess}
                     style={{
-                        color: '#000',
+                        color: '#19d27f',
                         cursor: 'pointer',
                         display: 'block',
                         marginTop: '10px',
@@ -124,7 +124,7 @@ function Article(props) {
                 <span
                     onClick={handleShowFull}
                     style={{
-                        color: '#000',
+                        color: '#19d27f',
                         cursor: 'pointer',
                         fontWeight: 'bold',
                         display: 'block',
