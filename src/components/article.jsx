@@ -18,6 +18,7 @@ function Article(props) {
                 display: 'flex',
                 justifyContent: 'center',
                 marginBottom:'20vh',
+                
             }}
         >
             <div
