@@ -5,6 +5,7 @@ import Article from "./components/article";
 import Footer from "./components/footer";
 import AboutUs from "./components/about-us";
 import ContactUs from "./components/contact-us";
+import PrivacyPolicy from "./components/privacy-policy";
 
 function Index() {
     const [activePage, setActivePage] = useState("home");
@@ -13,9 +14,9 @@ function Index() {
 
     useEffect(() => {
         setFade(false); // Start fade-out animation
-
+        
         const newImage = getHeroImage();
-
+        
         // Preload new image before switching
         const img = new Image();
         img.src = newImage;
@@ -34,6 +35,8 @@ function Index() {
                 return "/Humanity-Welfare-Limited/assets/2.jpg";
             case "contact":
                 return "/Humanity-Welfare-Limited/assets/3.jpg";
+            case "privacy":
+                return "/Humanity-Welfare-Limited/assets/7.jpg"; // Keep home image for privacy policy
             default:
                 return "/Humanity-Welfare-Limited/assets/1.jpg";
         }
@@ -73,6 +76,7 @@ function Index() {
 
             {activePage === "about" && <AboutUs />}
             {activePage === "contact" && <ContactUs />}
+            {activePage === "privacy" && <PrivacyPolicy />}
 
             <br /><br /><br />
             <Footer />
