@@ -8,23 +8,21 @@ import {
 
 const iconList = {
     faCircleUser, faCircleInfo, faDatabase, faScaleUnbalancedFlip,
-    faSquareShareNodes, faKey, faUserCheck, faFolder, faCookieBite, faRotate, faPhone  // ✅ FIXED
+    faSquareShareNodes, faKey, faUserCheck, faFolder, faCookieBite, faRotate, faPhone
 };
 
 function PrivacyPolicy() {
     return (
-        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <div className="privacy-container">
             <br /><br /><br /><br />
-            <div style={{ width: '100%', textAlign: 'center', marginTop: '40px' }}>
-                <h1 style={{ fontSize: '5rem', fontWeight: 'bold', color: '#00cd70c7' }}>
-                    Privacy & Policy
-                </h1>
+            <div className="privacy-title-container">
+                <h1 className="privacy-title">Privacy & Policy</h1>
                 <br /><br /><br />
                 <FontAwesomeIcon icon={faShieldHalved} size="5x" color="#00cd70c7" />
             </div>
             <br /><br /><br /><br /><br /><br /><br />
 
-            <div style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <div className="privacy-content">
                 {PpDetails.map((item) => (
                     <PpData 
                         key={item.id} 

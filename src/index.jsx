@@ -13,22 +13,18 @@ function Index() {
     const [fade, setFade] = useState(true);
 
     useEffect(() => {
-        setFade(false); // Start fade-out animation
-        
+        setFade(false);
         const newImage = getHeroImage();
-        
-        // Preload new image before switching
         const img = new Image();
         img.src = newImage;
         img.onload = () => {
             setTimeout(() => {
-                setHeroImage(newImage); // Change image after fade-out
-                setFade(true); // Start fade-in animation
-            }, 400); // Wait for fade-out before switching image
+                setHeroImage(newImage);
+                setFade(true);
+            }, 400);
         };
     }, [activePage]);
 
-    // Function to get the correct hero image based on the active page
     const getHeroImage = () => {
         switch (activePage) {
             case "about":
@@ -36,7 +32,7 @@ function Index() {
             case "contact":
                 return "/Humanity-Welfare-Limited/assets/3.jpg";
             case "privacy":
-                return "/Humanity-Welfare-Limited/assets/7.jpg"; // Keep home image for privacy policy
+                return "/Humanity-Welfare-Limited/assets/7.jpg";
             default:
                 return "/Humanity-Welfare-Limited/assets/1.jpg";
         }
@@ -47,26 +43,18 @@ function Index() {
             <NavbarF />
             <NavbarS setActivePage={setActivePage} />
 
-            {/* Hero Section with Fade-In & Fade-Out Animation */}
-            <div style={{ width: "100%", overflow: "hidden", position: "relative" }}>
+            <div className="hero-container">
                 <img 
-                    style={{
-                        width: "100%",
-                        height: "55vh",
-                        objectFit: "cover",
-                        opacity: fade ? 1 : 0, // Fade-in & Fade-out
-                        transition: "opacity 0.8s ease-in-out" // Smooth fade effect
-                    }} 
+                    className={`hero-image ${fade ? '' : 'hero-image-fade-out'}`}
                     src={heroImage} 
                     alt="Hero Section"
                 />
             </div>
 
-            {/* Page Content */}
             {activePage === "home" && (
                 <div>
-                    <div style={{ width: '100%', display: 'flex', margin: '80px 0', justifyContent: 'center' }}>
-                        <h1 style={{ fontSize: '5rem', color: '#00cd70c7' }}>Articles</h1>
+                    <div className="articles-title-container">
+                        <h1 className="articles-title">Articles</h1>
                     </div>
                     <Article articleNumber={0} img="/Humanity-Welfare-Limited/assets/4.jpg" />
                     <Article articleNumber={1} img="/Humanity-Welfare-Limited/assets/5.jpg" />

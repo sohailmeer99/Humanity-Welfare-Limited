@@ -1,154 +1,85 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ArticleData from '../../article-data';
-import { style } from 'framer-motion/client';
 
 function Article(props) {
     const [showFull, setShowFull] = useState(false);
     const article = ArticleData[props.articleNumber];
+    const textContainerRef = useRef(null);
 
     const handleShowFull = () => setShowFull(true);
-    const handleShowLess = () => setShowFull(false);
+
+    const handleShowLess = () => {
+        setShowFull(false);
+        if (textContainerRef.current) {
+            textContainerRef.current.scrollTop = 0;
+        }
+    };
 
     return (
-        <div
-            style={{
-                width: '100%',
-                height: '70vh',
-                display: 'flex',
-                justifyContent: 'center',
-                marginBottom:'20vh',
-                
-            }}
-        >
-            <div
-                style={{
-                    width: '80%',
-                    height: '70vh',
-                    display: 'flex',
-                    padding:'10px',
-                    boxShadow:'0px 10px 52px -12px #4FFFB0',
-                    justifyContent: 'space-between',
-                    borderRadius:'40px'
-                }}
-            >
-                <div style={{ width: '30vw', height: '100%' }}>
-                    <img
-                        style={{
-                            width: '30vw',
-                            height: '100%',
-                            objectFit: 'cover',
-                            borderRadius: '20px',
-                        }}
-                        src= {props.img}
-                        alt="Housing Support"
-                    />
+        <div className="article-container">
+            <div className="article-card">
+                {/* Image Section (Fixed Size) */}
+                <div className="article-image-container">
+                    <img className="article-image" src={props.img} alt={article.heading} />
                 </div>
-                <div
-                    style={{
-                        width: '60%',
-                        height: '100%',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between',
-                        transition: 'all 0.4s ease',
-                    }}
-                >
-                    <div style={{ height: '20%', margin: 0 }}>
-                        <h1
-                            style={{
-                                paddingBottom: '30px',
-                                fontSize: '3rem',
-                                color: '#00cd70c7',
-                                margin: 0,
-                                fontWeight:'900'
-                            }}
-                        >
-                            {article.heading}
-                        </h1>
-                    </div>
-                    <div
-                        style={{
-                            height: showFull ? '50%' : '40%',
-                            overflowY: showFull ? 'scroll' : 'hidden',
-                            paddingRight: '10px',
-                            marginTop:'50px'
-                        }}
-                    >
-                       <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-    style={{
-        fontSize: '1.4rem',
-        color: '#00cd70c7',
-        width: showFull ? '100%' : '100%', // ✅ Smoothly transition width
-        transition: 'width 0.5s ease',
-        overflowX: 'hidden', // ✅ No horizontal scrollbar flicker
-    }}
->
-    <AnimatePresence mode="wait">
-        {showFull ? (
-            <motion.div
-                key="fullText"
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.4 }}
-                style={{ overflowX: 'hidden' }} // ✅ Extra safeguard against scrollbars
-            >
-                {article.fullPara}
-                <span
-                    onClick={handleShowLess}
-                    style={{
-                        color: '#19d27f',
-                        cursor: 'pointer',
-                        display: 'block',
-                        marginTop: '10px',
-                        fontWeight: 'bold',
-                    }}
-                >
-                    Show Less
-                </span>
-            </motion.div>
-        ) : (
-            <motion.div
-                key="shortText"
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 30 }}
-                transition={{ duration: 0.4 }}
-                style={{ overflowX: 'hidden' }} // ✅ Extra safeguard
-            >
-                {article.shortPara}
-                <span
-                    onClick={handleShowFull}
-                    style={{
-                        color: '#19d27f',
-                        cursor: 'pointer',
-                        fontWeight: 'bold',
-                        display: 'block',
-                        marginTop: '10px',
-                    }}
-                >
-                    Read More
-                </span>
-            </motion.div>
-        )}
-    </AnimatePresence>
-</motion.div>
 
+                {/* Content Section */}
+                <div className="article-content">
+                    <div className="article-heading-container">
+                        <h1 className="article-heading">{article.heading}</h1>
                     </div>
-                    <div
-                        style={{
-                            height: '20%',
-                            display: 'flex',
-                            alignItems: 'end',
-                            paddingBottom:'10px'
-                        }}
+
+                    {/* Article Text */}
+                    <div 
+                        className={`article-text-container ${showFull ? 'expanded' : ''}`} 
+                        ref={textContainerRef} 
                     >
-                        <button className="donate-btn">Donate</button>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="article-text"
+                        >
+                            <AnimatePresence mode="wait">
+                                {showFull ? (
+                                    <motion.div
+                                        key="fullText"
+                                        initial={{ opacity: 0, y: 5 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -5 }}
+                                        transition={{ duration: 0.4 }}
+                                        style={{ color: '#4FFFB0' }}
+                                    >
+                                        {article.fullPara}
+                                    </motion.div>
+                                ) : (
+                                    <motion.div
+                                        key="shortText"
+                                        initial={{ opacity: 0, y: -5 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 5 }}
+                                        transition={{ duration: 0.4 }}
+                                        style={{ color: '#4FFFB0' }}
+                                    >
+                                        {article.shortPara}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </motion.div>
+                    </div>
+
+                    {/* Read More / Show Less Button */}
+                    <div className="read-more-container">
+                        <span onClick={showFull ? handleShowLess : handleShowFull} className="read-more-link">
+                            {showFull ? "Show Less" : "Read More"}
+                        </span>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="article-action-container">
+                        <button className="donate-btn-article">Donate</button>
                     </div>
                 </div>
             </div>
