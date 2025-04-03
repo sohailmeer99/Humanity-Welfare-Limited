@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareFacebook, faSquareInstagram, faLinkedin, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-function Footer() {
+function Footer({ setActivePage }) {
     return (
         <div className="footer-container">
            <div className="footer-content">
@@ -35,10 +35,10 @@ function Footer() {
                         </div>
                         <div className="footer-links-container">
                             <ul className="footer-links-list">
-                                <li>About Us</li>
-                                <li>Privacy & Policy</li>
-                                <li>Donate Us</li>
-                                <li>Contact Us</li>
+                                <li onClick={() => setActivePage("about")}>About Us</li>
+                                <li onClick={() => setActivePage("privacy")}>Privacy & Policy</li>
+                                <li onClick={() => setActivePage("home")}>Donate Us</li>
+                                <li onClick={() => setActivePage("contact")}>Contact Us</li>
                             </ul>
                         </div>
                     </div>

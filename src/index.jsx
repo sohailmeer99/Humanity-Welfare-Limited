@@ -73,7 +73,7 @@ function Index() {
             {activePage === "privacy" && <PrivacyPolicy />}
 
             <br /><br /><br />
-            <Footer />
+            <Footer setActivePage={setActivePage} />
         </div>
     );
 }
