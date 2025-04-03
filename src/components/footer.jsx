@@ -22,7 +22,12 @@ function Footer() {
                <div className="footer-bottom-section">
                     <div className="footer-left-section">
                         <div className="footer-brand-container">
-                            <h1 className="footer-brand-title">HWL</h1>
+                            {/* Replace h1 with img for the logo */}
+                            <img 
+                                src="/Humanity-Welfare-Limited/assets/logo.png" 
+                                alt="HWL Logo" 
+                                className="footer-logo"
+                            />
                             <p className="footer-brand-text">
                                 <strong>Humanity Welfare Limited</strong> is a Non-Profit Organization providing Free Education,
                                 Healthcare, and Housing Support to Underprivileged Communities.

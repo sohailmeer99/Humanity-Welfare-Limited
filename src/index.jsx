@@ -49,6 +49,12 @@ function Index() {
                     src={heroImage} 
                     alt="Hero Section"
                 />
+
+                {/* Heading and Line over the image */}
+                <div className="hero-text-container">
+                    <h1 className="hero-heading">Humanity Welfare</h1>
+                    <p className="hero-line">We Work For The Sake Of Humanity</p>
+                </div>
             </div>
 
             {activePage === "home" && (

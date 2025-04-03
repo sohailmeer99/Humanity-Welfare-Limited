@@ -18,9 +18,13 @@ function NavbarS({ setActivePage }) {
         <div className="navbar2-container">
             <div className="navbar2-content">
                 <div className="navbar-header">
-                    <h1 className="navbar2-brand" onClick={() => handleNavClick("home")}>
-                        HWL
-                    </h1>
+                    {/* Replace h1 with img for the logo */}
+                    <img 
+                        src="/Humanity-Welfare-Limited/assets/logo.png" 
+                        alt="HWL Logo" 
+                        className="navbar2-logo"
+                        onClick={() => handleNavClick("home")} 
+                    />
                     
                     {/* Desktop Navigation - visible on larger screens */}
                     <div className="desktop-nav">

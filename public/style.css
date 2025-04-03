@@ -46,6 +46,157 @@ body{
     left: 0;
     transform: translateX(0);
   }
+  .navbar2-logo {
+    height: 55px; /* Set height to match the size of 'HWL' text */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor to pointer when hovering over logo */
+}
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .navbar2-logo {
+        height: 50px; /* Reduce logo size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar2-logo {
+        height: 50px; /* Further reduce logo size on very small screens */
+    }
+}
+
+
+
+
+
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust this to control how much of the screen the image covers */
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the image covers the entire container */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-image-fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Container for the heading and line text */
+.hero-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+/* Heading Styling */
+.hero-heading {
+  font-size: 6rem;
+  margin: 0;
+  color: #06de79;
+  font-weight: 900;
+  line-height: 1.2;
+  text-shadow: 0px 0px 5px #06de79, 0px 0px 10px #06de79; /* Added text shadow for better visibility */
+  animation: blinkEffect 1s ease-in-out infinite; /* Blinking effect */
+}
+
+/* Line under the heading */
+.hero-line {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #06de79;
+  font-weight: 700;
+  text-shadow: 0px 0px 5px #06de79, 0px 0px 10px #06de79; /* Added text shadow */
+  animation: blinkEffect 1s ease-in-out infinite; /* Blinking effect */
+}
+
+/* Blinking animation */
+@keyframes blinkEffect {
+  0% {
+    text-shadow: 0px 0px 2px #06de79, 0px 0px 1px #06de79;
+  }
+  50% {
+    text-shadow: 0px 0px 5px #06de79, 0px 0px 5px #06de79;
+  }
+  100% {
+    text-shadow: 0px 0px 2px #06de79, 0px 0px 1px #06de79;
+  }
+}
+
+/* Responsive Design: Adjust sizes on smaller screens */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 5rem;
+  }
+  .hero-line {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+  .hero-line {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .contact-inputs{
     width: 400px;
     height: 50px;
@@ -74,7 +225,64 @@ body{
     outline: none;
     border: 1px solid #4fffb083;
   }
+
+  @media (max-width: 500px){
+    .contact-inputs{
+      width: 350px;
+      height: 50px;
+      border: 2px solid #4fffb083;
+      background-color: #c1f9e07c;
+      padding: 10px;
+    }
+    .contact-textarea{
+      width: 350px;
+      border: 2px solid #4fffb083;
+      background-color: #c1f9e07c;
+      padding: 10px;
+    }
+    .contact-title{
+      font-size: 3rem !important;
+    }
+  }
+  @media (max-width: 400px){
+    .contact-inputs{
+      width: 300px;
+      height: 50px;
+      border: 2px solid #4fffb083;
+      background-color: #c1f9e07c;
+      padding: 10px;
+    }
+    .contact-textarea{
+      width: 300px;
+      border: 2px solid #4fffb083;
+      background-color: #c1f9e07c;
+      padding: 10px;
+    }
+    .contact-title{
+      font-size: 3rem !important;
+    }
+  }
+    @media (max-width: 300px){
+      .contact-inputs{
+        width: 250px;
+        height: 50px;
+        border: 2px solid #4fffb083;
+        background-color: #c1f9e07c;
+        padding: 10px;
+      }
+      .contact-textarea{
+        width: 250px;
+        border: 2px solid #4fffb083;
+        background-color: #c1f9e07c;
+        padding: 10px;
+      }
+      .contact-title{
+        font-size: 3rem !important;
+      }
+    
+  }
   /* ==================== ABOUT-US COMPONENT ==================== */
+/* ================= Desktop Styles (unchanged) ================= */
 .about-container {
   width: 100%;
   display: flex;
@@ -101,7 +309,8 @@ body{
   background-color: #96fbce7c;
   display: flex;
   justify-content: center;
-  border-radius: 60px;
+  border-radius: 30px;
+  overflow: hidden; /* prevent inner overflow */
 }
 
 .about-main-card-content {
@@ -113,7 +322,7 @@ body{
 }
 
 .about-main-text {
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
   color: #00cd70c7;
   text-align: center;
@@ -127,7 +336,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 .about-feature-icon-container {
@@ -139,10 +349,10 @@ body{
 
 .about-feature-content {
   width: 50%;
-  display: flex-start;
+  /* remains row layout on desktop */
+  display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: start;
 }
 
 .about-feature-text {
@@ -158,7 +368,7 @@ body{
 }
 
 .about-link-box {
-  width: 500px;
+  width: 200px;
   height: 50px;
   background-color: #00cd70c7;
   border-radius: 10px;
@@ -170,10 +380,11 @@ body{
 .about-link {
   font-size: 1.1rem;
   color: #fff;
+  text-decoration: none;
 }
 
 .about-action-button {
-  width: 100px;
+  width: 200px;
   height: 50px;
   background-color: #00cd70c7;
   border-radius: 10px;
@@ -185,7 +396,131 @@ body{
 .about-action-text {
   font-size: 1.1rem;
   color: #fff;
+  text-decoration: none;
 }
+
+/* =============== Responsive Styles (Tablets & Mobiles) =============== */
+
+/* For Tablets & Smaller Devices */
+@media (max-width: 1024px) {
+  /* First & Last Boxes (Main Cards) */
+  .about-main-card {
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .about-main-card-content {
+    width: 90%;
+    height: auto;
+  }
+  
+  .about-main-text {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+  
+  /* Feature Cards: Change layout from row to column */
+  .about-feature-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .about-feature-icon-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .about-feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .about-feature-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .about-feature-text-small {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  /* Scale down icons – targeting the generated SVGs */
+  .about-feature-icon-container svg {
+    font-size: 6rem;  /* smaller than desktop (desktop uses size "10x") */
+  }
+  
+  .about-link-box {
+    width: 200px;
+  }
+  
+  .about-action-button {
+    width: 200px;
+    height: 40px;
+  }
+  
+  .about-action-text {
+    font-size: 1rem;
+  }
+}
+
+/* For Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 3rem;
+  }
+  
+  .about-main-card {
+    width: 80%;
+    padding: 15px 0;
+    border-radius: 20px;
+  }
+  
+  .about-main-text {
+    font-size: 1.2rem;
+  }
+  
+  .about-feature-card {
+    width: 80%;
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+  .about-feature-text {
+    font-size: 1.8rem;
+  }
+  
+  .about-feature-text-small {
+    font-size: 1.1rem;
+  }
+  
+  .about-feature-icon-container svg {
+    font-size: 4rem;
+  }
+  
+  .about-link-box {
+    width: 200px;
+  }
+  
+  .about-action-button {
+    width: 200px;
+    height: 35px;
+  }
+  
+  .about-action-text {
+    font-size: 0.9rem;
+  }
+}
+
 /* ==================== END ABOUT-US COMPONENT ==================== */
 
 /* ==================== INDEX COMPONENT ==================== */
@@ -310,10 +645,11 @@ body{
   color: #19d27f;
   cursor: pointer;
   font-weight: bold;
-  padding: 10px 20px; /* Larger button */
+  padding: 10px 33px; /* Larger button */
   background: rgba(255, 255, 255, 0.9);
   transition: all 0.3s;
   display: inline-block;
+  border: 2px solid #00cd70c7;
   border-radius: 5px;
 }
 
@@ -1257,6 +1593,7 @@ body{
 /* ==================== END PP-DATA COMPONENT ==================== */
 
 /* ==================== PRIVACY-POLICY COMPONENT ==================== */
+/* Default Styles (Desktop) */
 .privacy-container {
   width: 100%;
   display: flex;
@@ -1284,6 +1621,47 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+/* Media Queries for Tablets and Mobiles */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .privacy-title {
+    font-size: 3.5rem;
+  }
+
+  .pp-data-icon-container {
+    font-size: 3rem;
+  }
+
+  .pp-data-heading {
+    font-size: 2rem;
+  }
+
+  .pp-data-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .privacy-title {
+    font-size: 2.5rem;
+  }
+
+  .pp-data-icon-container {
+    font-size: 2.5rem;
+  }
+
+  .pp-data-heading {
+    font-size: 1.5rem;
+  }
+
+  .pp-data-text {
+    font-size: 0.9rem;
+  }
+}
+
 /* ==================== END PRIVACY-POLICY COMPONENT ==================== */
 /* Import the font at the top of your CSS file */
 
@@ -1310,3 +1688,25 @@ body{
   font-weight: normal !important;
   letter-spacing: 3px !important;
 }
+.footer-logo {
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 5px;
+  height: 50px;
+  width: 50px; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer when hovering over logo */
+}
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+  .footer-logo {
+      height: 50px; /* Reduce logo size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+      height: 50px; /* Further reduce logo size on very small screens */
+  }
+}
+

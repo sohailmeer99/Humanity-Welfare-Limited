@@ -27,7 +27,7 @@ function AboutUs(){
                     <div><p className="about-feature-text">We are officially registered from the Companies House Government of UK</p></div>
                     <br />
                     <div className="about-link-box">
-                        <a className="about-link">https://find-and-update.company-information.service.gov.uk/</a>
+                        <a className="about-link">Official Registration</a>{/*https://find-and-update.company-information.service.gov.uk/*/}
                     </div>
                 </div>
             </div>
