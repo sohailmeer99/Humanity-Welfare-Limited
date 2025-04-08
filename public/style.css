@@ -1164,6 +1164,7 @@ body{
   min-height: 50px;
   background-color: #4FFFB0;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0; /* Remove all padding */
   margin: 0; /* Remove all margins */
@@ -1171,7 +1172,7 @@ body{
 }
 
 .navbar1-content {
-  width: 100%; /* Take full width */
+  width: 80%; /* Take full width */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1195,6 +1196,9 @@ body{
 
 /* Mobile scaling */
 @media (max-width: 768px) {
+  .navbar1-content{
+    width: 90%;
+  }
   .navbar1-content {
     padding: 0 10px; /* Reduced side padding */
   }
@@ -1210,12 +1214,15 @@ body{
 
 /* Very small mobile */
 @media (max-width: 480px) {
+  .navbar1-content{
+    width: 100%;
+  }
   .navbar1-item {
     padding: 6px 0;
   }
   
   .navbar1-text {
-    font-size: clamp(0.7rem, 3vw, 0.9rem); /* More aggressive scaling */
+    font-size: clamp(0.8rem, 3vw, 0.9rem); /* More aggressive scaling */
   }
   
   .navbar1-item .svg-inline--fa {
