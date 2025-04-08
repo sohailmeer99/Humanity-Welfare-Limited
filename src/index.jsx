@@ -44,11 +44,14 @@ function Index() {
             <NavbarS setActivePage={setActivePage} />
 
             <div className="hero-container">
-                <img 
-                    className={`hero-image ${fade ? '' : 'hero-image-fade-out'}`}
-                    src={heroImage} 
-                    alt="Hero Section"
-                />
+                <div className="hero-overlay-wrapper">
+                    <img
+                        className={`hero-image ${fade ? '' : 'hero-image-fade-out'}`}
+                        src={heroImage}
+                        alt="Hero Section"
+                    />
+                    <div className="hero-overlay"></div>
+                </div>
 
                 {/* Heading and Line over the image */}
                 <div className="hero-text-container">
