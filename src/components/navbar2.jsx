@@ -20,7 +20,7 @@ function NavbarS({ setActivePage }) {
                 <div className="navbar-header">
                     {/* Replace h1 with img for the logo */}
                     <img 
-                        src="/Humanity-Welfare-Limited/assets/logo.png" 
+                        src="./assets/logo.png" 
                         alt="HWL Logo" 
                         className="navbar2-logo"
                         onClick={() => handleNavClick("home")} 

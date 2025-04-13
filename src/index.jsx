@@ -9,7 +9,7 @@ import PrivacyPolicy from "./components/privacy-policy";
 
 function Index() {
     const [activePage, setActivePage] = useState("home");
-    const [heroImage, setHeroImage] = useState("/Humanity-Welfare-Limited/assets/1.jpg");
+    const [heroImage, setHeroImage] = useState("./assets/1.jpg");
     const [fade, setFade] = useState(true);
 
     useEffect(() => {
@@ -28,13 +28,13 @@ function Index() {
     const getHeroImage = () => {
         switch (activePage) {
             case "about":
-                return "/Humanity-Welfare-Limited/assets/2.jpg";
+                return "./assets/2.jpg";
             case "contact":
-                return "/Humanity-Welfare-Limited/assets/3.jpg";
+                return "./assets/3.jpg";
             case "privacy":
-                return "/Humanity-Welfare-Limited/assets/7.jpg";
+                return "./assets/7.jpg";
             default:
-                return "/Humanity-Welfare-Limited/assets/1.jpg";
+                return "./assets/1.jpg";
         }
     };
 
@@ -64,9 +64,9 @@ function Index() {
                     <div className="articles-title-container">
                         <h1 className="articles-title">Articles</h1>
                     </div>
-                    <Article articleNumber={0} img="/Humanity-Welfare-Limited/assets/4.jpg" />
-                    <Article articleNumber={1} img="/Humanity-Welfare-Limited/assets/5.jpg" />
-                    <Article articleNumber={2} img="/Humanity-Welfare-Limited/assets/6.jpg" />
+                    <Article articleNumber={0} img="./assets/4.jpg" />
+                    <Article articleNumber={1} img="./assets/5.jpg" />
+                    <Article articleNumber={2} img="./assets/6.jpg" />
                 </div>
             )}
 

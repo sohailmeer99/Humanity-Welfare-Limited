@@ -27,7 +27,7 @@ function Footer({ setActivePage, activePage }) {
                     <div className="footer-left-section">
                         <div className="footer-brand-container">
                             <img 
-                                src="/Humanity-Welfare-Limited/assets/logo.png" 
+                                src="./assets/logo.png" 
                                 alt="HWL Logo" 
                                 className="footer-logo"
                             />
