@@ -53,7 +53,6 @@ function Index() {
                     <div className="hero-overlay"></div>
                 </div>
 
-                {/* Heading and Line over the image */}
                 <div className="hero-text-container">
                     <h1 className="hero-heading">Humanity Welfare</h1>
                     <p className="hero-line">We Work For The Sake Of Humanity</p>
@@ -76,7 +75,7 @@ function Index() {
             {activePage === "privacy" && <PrivacyPolicy />}
 
             <br /><br /><br />
-            <Footer setActivePage={setActivePage} />
+            <Footer setActivePage={setActivePage} activePage={activePage} />
         </div>
     );
 }

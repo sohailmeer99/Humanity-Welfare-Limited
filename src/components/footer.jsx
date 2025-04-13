@@ -1,7 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareFacebook, faSquareInstagram, faLinkedin, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-function Footer({ setActivePage }) {
+function Footer({ setActivePage, activePage }) {
+    let email = "info@humanitywelfares.org";
+    if (activePage === "contact") email = "contact@humanitywelfares.org";
+    else if (activePage === "privacy") email = "queries@humanitywelfares.org";
+
     return (
         <div className="footer-container">
            <div className="footer-content">
@@ -22,7 +26,6 @@ function Footer({ setActivePage }) {
                <div className="footer-bottom-section">
                     <div className="footer-left-section">
                         <div className="footer-brand-container">
-                            {/* Replace h1 with img for the logo */}
                             <img 
                                 src="/Humanity-Welfare-Limited/assets/logo.png" 
                                 alt="HWL Logo" 
@@ -46,8 +49,8 @@ function Footer({ setActivePage }) {
                         <div className="footer-contact-container">
                             <ul className="footer-contact-list">
                                 <li>128 City Road, London, United Kingdom, EC1V 2NX</li>
-                                <li>+92 123456789</li>
-                                <li>humanitywelfarelimited@gmail.com</li>
+                                <li>+123456789</li>
+                                <li>{email}</li>
                             </ul>
                         </div>
                         <div className="footer-social-container">
